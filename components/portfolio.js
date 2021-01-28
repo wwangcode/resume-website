@@ -1,12 +1,17 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
-const Portfolio = () => {
+const Portfolio = ({isMobile}) => {
+    // useEffect(() => {
+    // }, [isMobile])
+
+
     return (
-        <Container>
+        <Container isMobile={isMobile}>
             <SectionTitle>Projects</SectionTitle>
             <ProjectContainer>
                 <ContentContainer>
@@ -133,7 +138,6 @@ const Portfolio = () => {
                     </TextContainer>
                 </ContentContainer>
             </ProjectContainer>
-
         </Container>
     )
 }
@@ -152,21 +156,14 @@ const SectionTitle = styled.div`
 `;
 
 const ImageContainer = styled.div`
-    max-width: 30vw;
-    margin: 0 auto;
-    // border: 1px solid grey;
 `;
 
 const Link = styled.a`
 
 `;
 
-// const TextHeader = styled.div`
-//     font-size: 1.5rem;
-//     // font-weight: 400;
-// `;
 const Title = styled.div`
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0 auto;
     text-align: left;
     margin-bottom: 1rem;
@@ -176,7 +173,6 @@ const IconContainer = styled.div`
     font-size: 1.5rem;
     margin-right: 2rem;
     margin-bottom: 1rem;
-
 `;
 
 const ExternalLinksContainer = styled.div`
@@ -215,12 +211,11 @@ const TextContainer = styled.div`
 
 const ContentContainer = styled.div`
     display: flex;
-    flex-direction: row;
-    // align-items: center;
+    align-items: center;
+    justify-content: center;
 `;
 
 const ProjectContainer = styled.div`
-    max-width: 85vw;
     margin: 0 auto;
     display: block;
     margin-bottom: 5rem;
@@ -229,4 +224,17 @@ const ProjectContainer = styled.div`
 const Container = styled.main`
     padding-top: 4rem;
     min-height: calc(100vh - 4rem);
+    margin: 0 auto;
+
+    ${ContentContainer} {
+        flex-direction: ${({isMobile}) => isMobile ? 'column' : 'row'};
+    }
+
+    ${ImageContainer} {
+        width: ${({isMobile}) => isMobile ? '95vw' : '35vw'};
+    }
+
+    ${TextContainer} {
+        width: ${({isMobile}) => isMobile ? '95vw' : '35vw'};
+    }
 `;

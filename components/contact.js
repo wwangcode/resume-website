@@ -69,8 +69,9 @@ const ContactForm = ({isMobile}) => {
 
     return (
         <Container>
-            <Title>Contact</Title>
             <FormContainer isMobile={isMobile} sendState={sendState}>
+                <SectionTitle>Contact</SectionTitle>
+
                     {sendState !== 'SUCCESS' && (
                         <>
                             <form method='POST'>  
@@ -119,8 +120,11 @@ export default ContactForm
 
 // STYLED COMPONENTS
 
-const Title = styled.div`
+const SectionTitle = styled.div`
+    margin: 0 auto;
+    text-align: center;
     font-size: 3rem;
+    font-weight: 500;
 `;
 
 const SuccessContainer = styled.div`
@@ -224,7 +228,7 @@ const ErrorMessage = styled.div`
 const FormContainer = styled.div`
     text-align: center;
     margin: 0 auto;
-    padding: 1rem;
+    padding: .5rem;
 
     border: 1px solid rgba(255,255,255,1);
     border-radius: 6px;

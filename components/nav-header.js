@@ -1,23 +1,42 @@
 import styled from 'styled-components'
-// import Link from 'next/link'
 import { useState } from 'react'
+import MobileNav from './mobile-nav'
 
 
-const NavHeader = ({scrollTo}) => {
+const NavHeader = ({ scrollTo, isMobile }) => {
+    const [ isOpen, setIsOpen ] = useState(false)
     const [ section, setSection ] = useState('')
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen)
+    }
+
+
     return (
         <Container>
-            <HomeLinkContainer>
-                <HomeLink onClick={() => {setSection('home'); scrollTo('home')}}>W.</HomeLink>
-            </HomeLinkContainer>
-            <LinkContainer>
-                <Link onClick={() => {setSection('portfolio'); scrollTo('portfolio')}}>Work</Link>
-                <Link onClick={() => {setSection('about'); scrollTo('about')}}>About</Link>
-                <Link onClick={() => {setSection('contact'); scrollTo('contact')}}>Contact</Link>
-                <ResumeContainer>
-                    <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
-                </ResumeContainer>
-            </LinkContainer>
+            {!isMobile && (
+                <>
+                    <HomeLinkContainer>
+                        <HomeLink onClick={() => {setSection('home'); scrollTo('home'); toggleMenu()}}>W.</HomeLink>
+                    </HomeLinkContainer>
+                    <LinkContainer>
+                        <Link onClick={() => {setSection('portfolio'); scrollTo('portfolio')}}>Work</Link>
+                        <Link onClick={() => {setSection('about'); scrollTo('about')}}>About</Link>
+                        <Link onClick={() => {setSection('contact'); scrollTo('contact')}}>Contact</Link>
+                        <ResumeContainer>
+                            <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
+                        </ResumeContainer>
+                    </LinkContainer>
+                </>
+            )}
+            {isMobile && (
+                <>
+                    <HomeLinkContainer>
+                        <HomeLink onClick={() => {setSection('home'); scrollTo('home')}}>W.</HomeLink>
+                    </HomeLinkContainer>
+                    <MobileNav scrollTo={scrollTo} isOpen={isOpen} toggleMenu={toggleMenu}/>
+                </>
+            )}
         </Container>
     )
 }
@@ -31,6 +50,10 @@ const ResumeLink = styled.a`
     border-radius: 1rem;
     padding: .5rem;
     font-size: 1.25rem;
+
+    &:hover {
+        background-color: rgba(236,9,36,.6);
+    }
 `;
 
 const ResumeContainer = styled.div`
@@ -44,6 +67,10 @@ const HomeLink = styled.div`
     cursor: pointer;
     padding: .25rem .5rem;
     font-size: 2rem;
+
+    &:hover {
+        color: rgba(236,9,36,1)
+    }
 `;
 
 const HomeLinkContainer = styled.div`
@@ -59,6 +86,9 @@ const Link = styled.div`
     cursor: pointer;
     font-size: 1.25rem;
 
+    &:hover {
+        color: grey;
+    }
 `;
 
 const LinkContainer = styled.div`
@@ -74,7 +104,7 @@ const Container = styled.nav`
     z-index: 100;
     color: white;
     background-color: black;
-
+    width: 100vw;
     height: 4rem;
     margin: 0 auto;
     

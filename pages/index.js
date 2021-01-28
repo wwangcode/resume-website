@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import styled from 'styled-components'
 
 import NavHeader from '../components/nav-header'
@@ -12,13 +12,15 @@ import Footer from '../components/footer'
 
 // NOTE: want to design a single page app w. different sections. Nextjs is prob overkill for an app of this size but i like using it and deploying it is easy
 const Home = ({isMobile}) => {
-  // use this for scroll to top 
+  useEffect(() => {
+  }, [isMobile])
+  // scroll navigation
   const landingPageRef= useRef()
   const portfolioRef = useRef()
   const aboutRef = useRef()
   const contactRef = useRef()
   const scrollToSection = (componentNode) => {
-    componentNode.scrollIntoView({behavior: `smooth`, block: `nearest`, inline: `start`})
+    componentNode.scrollIntoView({behavior: `smooth`, inline: `start`})
   }
   const handleScrollToSection = (section) => {
     if ((section === 'portfolio') && portfolioRef && portfolioRef.current) {
@@ -38,17 +40,17 @@ const Home = ({isMobile}) => {
 
   return (
     <>
-      <NavHeader scrollTo={handleScrollToSection} />
-      <VerticalLinks />
+      <NavHeader scrollTo={handleScrollToSection} isMobile={isMobile} />
+      {!isMobile && (<VerticalLinks />)}
       <Container>
         <div ref={landingPageRef} section='home'>
-          <LandingPage scrollTo={handleScrollToSection} />  
+          <LandingPage scrollTo={handleScrollToSection} isMobile={isMobile}/>  
         </div>
         <div ref={portfolioRef} section='portfolio'>
           <Portfolio isMobile={isMobile} />
         </div>
         <div ref={aboutRef} section='about'>
-          <About scrollTo={handleScrollToSection} />
+          <About scrollTo={handleScrollToSection} isMobile={isMobile}/>
         </div>
         <div ref={contactRef} section='contact'>
           <Contact scrollTo={handleScrollToSection} />
@@ -65,4 +67,6 @@ export default Home
 // STYLED COMPONENTS 
 
 const Container = styled.div`
+
+
 `;

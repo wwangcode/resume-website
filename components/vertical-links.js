@@ -14,10 +14,14 @@ const VerticalLinks = () => {
                     </a>
                 </Item>
                 <Item>
-                    <FontAwesomeIcon icon={faLinkedinIn} size='1x' />
+                    <a href='https://linkedin.com/in/wwangconnect' target='_blank'>
+                        <FontAwesomeIcon icon={faLinkedinIn} size='1x' />
+                    </a>
                 </Item>
                 <Item>
-                    <FontAwesomeIcon icon={faGithub} size='1x' />
+                    <a href='https://github.com/wwangcode' target='_blank'>
+                        <FontAwesomeIcon icon={faGithub} size='1x' />
+                    </a>
                 </Item>
             </List>
         </Container>

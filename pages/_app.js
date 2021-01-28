@@ -10,37 +10,37 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     _handleIsClient()
-}, [])
+  }, [])
 
 // checks if this is the server or client - if client, _handleIsMobile()
-useEffect(() => {
-    if (isClient) {
-        window.addEventListener('resize', _handleIsMobile)
-        _handleIsMobile()
-        return () => { window.removeEventListener('resize', _handleIsMobile) }
+  useEffect(() => {
+      if (isClient) {
+          window.addEventListener('resize', _handleIsMobile)
+          _handleIsMobile()
+          return () => { window.removeEventListener('resize', _handleIsMobile) }
+      }
+      }, [ isClient ? 
+          ( (document.documentElement.clientWidth || 0, window.innerWidth || 0), 
+          (document.documentElement.clientHeight || 0, window.innerHeight || 0) )
+          : null]
+  )
+
+  const _handleIsMobile = () => {
+      const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+      const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
+      if ((vh > 1.2 * vw) || (vh < 600) || (vw < 1000)) {
+          setIsMobile(true)
+      }
+      else setIsMobile(false)
+  }
+
+  const _handleIsClient = () => {
+    if (typeof window !== 'undefined' || process.browser) {
+        setIsClient(true)
     }
-    }, [ isClient ? 
-        ( (document.documentElement.clientWidth || 0, window.innerWidth || 0), 
-        (document.documentElement.clientHeight || 0, window.innerHeight || 0) )
-        : null]
-)
-
-const _handleIsMobile = () => {
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-
-    if ((vh > 1.2 * vw) || (vh < 600) || (vw < 800)) {
-        setIsMobile(true)
-    }
-    else setIsMobile(false)
-}
-
-const _handleIsClient = () => {
-   if (typeof window !== 'undefined' || process.browser) {
-       setIsClient(true)
-   }
-   else setIsClient(false)
-}
+    else setIsClient(false)
+  }
   return (
     <>
       <Head>

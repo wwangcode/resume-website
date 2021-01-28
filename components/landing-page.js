@@ -38,7 +38,8 @@ const ScrollButton = styled.div`
 
 const Container = styled.main`
     height: calc(100vh - 4rem);
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
     background-color: black;
     color: white;
     font-size: 3rem;
@@ -47,5 +48,6 @@ const Container = styled.main`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
 `;
 

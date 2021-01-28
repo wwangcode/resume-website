@@ -13,7 +13,6 @@ const BaseLayout = createGlobalStyle`
         box-sizing: border-box;
         background-color: rgb(0,0,0);
         color: white;
-        // color: rgba(255,255,255, 0.75);
         max-width: 100vw;
         height: auto;
         margin: 0;
