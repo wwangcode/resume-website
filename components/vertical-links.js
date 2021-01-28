@@ -48,6 +48,8 @@ const List = styled.ul`
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 1rem;
+
+    background-color: transparent;
 `;
 
 const Container = styled.nav`
@@ -60,6 +62,8 @@ const Container = styled.nav`
     color: grey;
     line-height: 1.3;
     display: block;
+    background-color: transparent;
+
 
     &:after {
         content: "";

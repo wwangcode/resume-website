@@ -39,7 +39,7 @@ const ResumeContainer = styled.div`
 `;
 
 const HomeLink = styled.div`
-    border: 1px solid white;
+    border: 1px solid rgba(236,9,36,1);
     display: inline-block;
     cursor: pointer;
     padding: .25rem .5rem;

@@ -34,7 +34,7 @@ const Portfolio = () => {
                             Pages are static site generated to improve SEO and page load performance. 
                             Images are lazy loaded, optimized on demand and cached on the content delivery network using Next.js.
                             Full screen images are dynamically sized to fit the dimensions of the viewport without the need to scroll.
-                            Images and details are served from custom built API (see below for further details).
+                            Images and details are served from custom built API (see below custom photos API).
                             Email subscription sign-up connected via MailChimp API.
                             Contact form connected through Nodemailer.
                             Deployed on Vercel.
@@ -75,7 +75,7 @@ const Portfolio = () => {
                             </IconContainer> */}
                         </ExternalLinksContainer>
                         <Details>
-                            API serves JSON data to front end (see above). 
+                            API serves JSON data for front end (see above photography blog). 
                             Using relational database modeling to connect photos, galleries, and tags. 
                             Deployed using serverless functions via AWS Lambda.
                             Database and images hosted on S3.
@@ -116,9 +116,9 @@ const Portfolio = () => {
                         <Details>
                             Pomodoro timer app wrapped in user authention layer.
                             Users can login or register.
-                            Session authentication is handled using JWT tokens through fusion.js middleware plugin.
-                            Custom API that supports CRUD operations.
-                            Database stores user account data, profiles, timer and user data. 
+                            Session authentication is handled using JWT tokens through custom fusion.js middleware plugin.
+                            Data served via Django Rest Framework from SQLite database.
+                            Database stores user account, profile, and timer data; supports CRUD operations
                             RPC calls are sent through Django to save Pomodoro session details and update user data.
                             App state is managed using Redux.
                         </Details>
@@ -129,9 +129,7 @@ const Portfolio = () => {
                             <TechTag>Node.js</TechTag>
                             <TechTag>Django Rest Framework</TechTag>
                             <TechTag>Python</TechTag>
-
                         </StackContainer>
-                        {/* <TextHeader>Technologies Used:</TextHeader> */}
                     </TextContainer>
                 </ContentContainer>
             </ProjectContainer>

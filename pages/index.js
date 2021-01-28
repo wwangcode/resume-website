@@ -11,7 +11,7 @@ import Footer from '../components/footer'
 
 
 // NOTE: want to design a single page app w. different sections. Nextjs is prob overkill for an app of this size but i like using it and deploying it is easy
-const Home = () => {
+const Home = ({isMobile}) => {
   // use this for scroll to top 
   const landingPageRef= useRef()
   const portfolioRef = useRef()
@@ -45,7 +45,7 @@ const Home = () => {
           <LandingPage scrollTo={handleScrollToSection} />  
         </div>
         <div ref={portfolioRef} section='portfolio'>
-          <Portfolio />
+          <Portfolio isMobile={isMobile} />
         </div>
         <div ref={aboutRef} section='about'>
           <About scrollTo={handleScrollToSection} />
