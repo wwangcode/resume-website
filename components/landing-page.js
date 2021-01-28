@@ -22,7 +22,7 @@ export default LandingPage
 
 // STYLED COMPONENTS
 const Name = styled.span`
-    color: red;
+    color: rgba(236,9,36,1);
     display: contents;
 `;
 

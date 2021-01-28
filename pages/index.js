@@ -6,6 +6,8 @@ import LandingPage from '../components/landing-page'
 import Portfolio from '../components/portfolio'
 import About from '../components/about'
 import Contact from '../components/contact'
+import VerticalLinks from '../components/vertical-links'
+import Footer from '../components/footer'
 
 
 // NOTE: want to design a single page app w. different sections. Nextjs is prob overkill for an app of this size but i like using it and deploying it is easy
@@ -36,23 +38,23 @@ const Home = () => {
 
   return (
     <>
-    <NavHeader scrollTo={handleScrollToSection} />
-    <Container>
-      <div ref={landingPageRef} section='home'>
-        <LandingPage scrollTo={handleScrollToSection} />  
-      </div>
-      <div ref={portfolioRef} section='portfolio'>
-        <Portfolio />
-      </div>
-      <div ref={aboutRef} section='about'>
-        <About scrollTo={handleScrollToSection} />
-      </div>
-      <div ref={contactRef} section='contact'>
-        <Contact scrollTo={handleScrollToSection} />
-      </div>
-      <br />
-      Footer: links to github and linkedin
-    </Container>
+      <NavHeader scrollTo={handleScrollToSection} />
+      <VerticalLinks />
+      <Container>
+        <div ref={landingPageRef} section='home'>
+          <LandingPage scrollTo={handleScrollToSection} />  
+        </div>
+        <div ref={portfolioRef} section='portfolio'>
+          <Portfolio />
+        </div>
+        <div ref={aboutRef} section='about'>
+          <About scrollTo={handleScrollToSection} />
+        </div>
+        <div ref={contactRef} section='contact'>
+          <Contact scrollTo={handleScrollToSection} />
+        </div>
+      </Container>
+      {/* <Footer /> */}
     </>
   )
 }
@@ -63,5 +65,4 @@ export default Home
 // STYLED COMPONENTS 
 
 const Container = styled.div`
-
 `;

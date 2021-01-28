@@ -12,7 +12,7 @@ const Portfolio = () => {
                 <ContentContainer>
                     <ImageContainer>
                         <Link href='https://wwangphoto.com' target='_blank'>
-                            <Image src='/images/wwangphoto-desktop.jpg' alt='wwangphoto.com' width='3840' height='2192' />
+                            <Image src='/images/wwangphoto-desktop.jpg' alt='wwangphoto.com' width='3840' height='2188' />
                         </Link>
                     </ImageContainer>
                     <TextContainer>
@@ -30,9 +30,9 @@ const Portfolio = () => {
                             </IconContainer>
                         </ExternalLinksContainer>
                         <Details>
-                            Mobile optimized photography blog website. 
+                            Mobile optimized responsive photography blog website. 
                             Pages are static site generated to improve SEO and page load performance. 
-                            Images are lazy loaded, optimized on demand and cached on the content delivery network. 
+                            Images are lazy loaded, optimized on demand and cached on the content delivery network using Next.js.
                             Full screen images are dynamically sized to fit the dimensions of the viewport without the need to scroll.
                             Images and details are served from custom built API (see below for further details).
                             Email subscription sign-up connected via MailChimp API.
@@ -100,7 +100,7 @@ const Portfolio = () => {
                         {/* </Link> */}
                     </ImageContainer>
                     <TextContainer>
-                        <Title>Pomodoro App w. User Authentication</Title>
+                        <Title>User Authentication</Title>
                         <ExternalLinksContainer>
                             <IconContainer>
                                 <Link href='https://github.com/wwangcode/planter_app' target='_blank'>
@@ -114,15 +114,18 @@ const Portfolio = () => {
                             </IconContainer> */}
                         </ExternalLinksContainer>
                         <Details>
-                            Pomodoro app wrapped in user authention layer.
+                            Pomodoro timer app wrapped in user authention layer.
                             Users can login or register.
                             Session authentication is handled using JWT tokens through fusion.js middleware plugin.
-                            Database stores user account data, saved timer settings and user data. 
-                            RPC calls are sent through Django to save Pomodoro sessions and update user data.
+                            Custom API that supports CRUD operations.
+                            Database stores user account data, profiles, timer and user data. 
+                            RPC calls are sent through Django to save Pomodoro session details and update user data.
+                            App state is managed using Redux.
                         </Details>
                         <StackContainer>
                             <TechTag>Fusion.js</TechTag>
                             <TechTag>React</TechTag>
+                            <TechTag>Redux</TechTag>
                             <TechTag>Node.js</TechTag>
                             <TechTag>Django Rest Framework</TechTag>
                             <TechTag>Python</TechTag>
@@ -153,6 +156,7 @@ const SectionTitle = styled.div`
 const ImageContainer = styled.div`
     max-width: 30vw;
     margin: 0 auto;
+    border: 1px solid grey;
 `;
 
 const Link = styled.a`
@@ -221,9 +225,10 @@ const ProjectContainer = styled.div`
     max-width: 85vw;
     margin: 0 auto;
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 `;
 
 const Container = styled.main`
+    padding-top: 4rem;
     min-height: calc(100vh - 4rem);
 `;

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import BaseLayout from '../constants/styles/base-layout'
 import '../styles/globals.css'
 
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
