@@ -1,9 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
-// import { config, dom } from "@fortawesome/fontawesome-svg-core";
+import { config, dom } from "@fortawesome/fontawesome-svg-core";
 
-// config.autoAddCss = false;
-    // ${dom.css()}
+config.autoAddCss = false;
 const BaseLayout = createGlobalStyle`
+    ${dom.css()}
     html, body {
         margin: 0;
         padding: 0;

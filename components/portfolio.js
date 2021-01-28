@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Portfolio = () => {
     return (
@@ -14,17 +17,28 @@ const Portfolio = () => {
                     </ImageContainer>
                     <TextContainer>
                         <Title>Photography Blog</Title>
+                        <ExternalLinksContainer>
+                            <IconContainer>
+                                <Link href='https://github.com/wwangcode' target='_blank'>
+                                    <FontAwesomeIcon icon={faGithub} size='1x' />
+                                </Link>
+                            </IconContainer>
+                            <IconContainer>
+                                <Link href='https://wwangphoto.com' target='_blank'>
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} size='1x' />
+                                </Link>
+                            </IconContainer>
+                        </ExternalLinksContainer>
                         <Details>
                             Mobile optimized photography blog website. 
-                            Using static site generation to improve SEO and page load performance. 
+                            Pages are static site generated to improve SEO and page load performance. 
                             Images are lazy loaded, optimized on demand and cached on the content delivery network. 
                             Full screen images are dynamically sized to fit the dimensions of the viewport without the need to scroll.
                             Images and details are served from custom built API (see below for further details).
-                            Mail subscription sign-up connected via MailChimp API.
+                            Email subscription sign-up connected via MailChimp API.
                             Contact form connected through Nodemailer.
                             Deployed on Vercel.
                         </Details>
-                        
                         <StackContainer>
                             <TechTag>Next.js</TechTag>
                             <TechTag>React</TechTag>
@@ -38,16 +52,28 @@ const Portfolio = () => {
                     </TextContainer>
                 </ContentContainer>
             </ProjectContainer>
-            <br />  
+
             <ProjectContainer>
                 <ContentContainer>
                     <ImageContainer>
-                        <Link href='https://wwangphoto.com' target='_blank'>
+                        {/* <Link href='https://wwangphoto.com' target='_blank'> */}
                             <Image src='/images/custom-api.jpg' alt='wwangphoto.com' width='1687' height='1047' />
-                        </Link>
+                        {/* </Link> */}
                     </ImageContainer>
                     <TextContainer>
-                        <Title>Custom Photo API</Title>
+                        <Title>Custom Photos API</Title>
+                        <ExternalLinksContainer>
+                            <IconContainer>
+                                <Link href='https://github.com/wwangcode' target='_blank'>
+                                    <FontAwesomeIcon icon={faGithub} size='1x' />
+                                </Link>
+                            </IconContainer>
+                            {/* <IconContainer>
+                                <Link href='https://wwangphoto.com' target='_blank'>
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} size='1x' />
+                                </Link>
+                            </IconContainer> */}
+                        </ExternalLinksContainer>
                         <Details>
                             API serves JSON data to front end (see above). 
                             Using relational database modeling to connect photos, galleries, and tags. 
@@ -60,6 +86,47 @@ const Portfolio = () => {
                             <TechTag>SQLite</TechTag>
                             <TechTag>AWS Lambda</TechTag>
                             <TechTag>AWS S3</TechTag>
+                        </StackContainer>
+                        {/* <TextHeader>Technologies Used:</TextHeader> */}
+                    </TextContainer>
+                </ContentContainer>
+            </ProjectContainer>
+
+            <ProjectContainer>
+                <ContentContainer>
+                    <ImageContainer>
+                        {/* <Link href='https://wwangphoto.com' target='_blank'> */}
+                            <Image src='/images/planter.jpg' alt='wwangphoto.com' width='3218' height='1890' />
+                        {/* </Link> */}
+                    </ImageContainer>
+                    <TextContainer>
+                        <Title>Pomodoro App w. User Authentication</Title>
+                        <ExternalLinksContainer>
+                            <IconContainer>
+                                <Link href='https://github.com/wwangcode/planter_app' target='_blank'>
+                                    <FontAwesomeIcon icon={faGithub} size='1x' />
+                                </Link>
+                            </IconContainer>
+                            {/* <IconContainer>
+                                <Link href='https://wwangphoto.com' target='_blank'>
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} size='1x' />
+                                </Link>
+                            </IconContainer> */}
+                        </ExternalLinksContainer>
+                        <Details>
+                            Pomodoro app wrapped in user authention layer.
+                            Users can login or register.
+                            Session authentication is handled using JWT tokens through fusion.js middleware plugin.
+                            Database stores user account data, saved timer settings and user data. 
+                            RPC calls are sent through Django to save Pomodoro sessions and update user data.
+                        </Details>
+                        <StackContainer>
+                            <TechTag>Fusion.js</TechTag>
+                            <TechTag>React</TechTag>
+                            <TechTag>Node.js</TechTag>
+                            <TechTag>Django Rest Framework</TechTag>
+                            <TechTag>Python</TechTag>
+
                         </StackContainer>
                         {/* <TextHeader>Technologies Used:</TextHeader> */}
                     </TextContainer>
@@ -100,7 +167,20 @@ const Title = styled.div`
     font-size: 2.5rem;
     margin: 0 auto;
     text-align: left;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+`;
+
+const IconContainer = styled.div`
+    font-size: 1.5rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+
+`;
+
+const ExternalLinksContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+
 `;
 
 
@@ -145,5 +225,5 @@ const ProjectContainer = styled.div`
 `;
 
 const Container = styled.main`
-    height: calc(100vh - 4rem);
+    min-height: calc(100vh - 4rem);
 `;
