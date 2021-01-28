@@ -173,7 +173,7 @@ const StyledTextArea = styled.textarea`
 
 const StyledSubmitButton = styled.input`
     margin: 0 auto;
-    background-color: rgba(236,9,36,.9);
+    background-color: rgba(236,9,36,.85);
     color: rgba(255,255,255,1);
     font-weight: 500;
     font-size: 1.5em;
@@ -199,25 +199,25 @@ const NameContainer = styled.div`
 `;
 
 const EmailContainer = styled.div`
-    margin: 1em auto;   
+    margin: .5em auto;   
 
 
 `;
 
 const SubjectContainer = styled.div`
-    margin: 1em auto;
+    margin: .5em auto;
 `;
 
 const MessageContainer = styled.div`
-    margin: 1em auto;
+    margin: .5em auto;
 `;
 
 const SendButtonContainer = styled.div`
-    // margin: 1em auto;
+    // margin: .5em auto;
 `;
 
 const ErrorMessage = styled.div`
-    margin-top: 1em;
+    margin-top: .5em;
     display: block;
 `;
 
@@ -247,7 +247,7 @@ const FormContainer = styled.div`
         // background-color: ${({sendState}) => sendState === 'SUCCESS' ? `rgb(10,10,10)` : `rgba(236,9,36,.7)`};
         // color: ${({sendState}) => sendState === 'SUCCESS' ? `rgba(255,255,255,.8)` : `rgba(255,255,255,1)`};
         cursor: ${({sendState}) => sendState === 'SUCCESS' ? `default` : `pointer`};
-        padding: ${({isMobile}) => isMobile ? '.75em 1em' : '1em 2em'};
+        padding: ${({isMobile}) => isMobile ? '.75em 1em' : '.5em 1em'};
 
         &: hover {
             background-color: ${({sendState}) => sendState === 'SUCCESS' ? `` : `rgba(236,9,36,.6)`};

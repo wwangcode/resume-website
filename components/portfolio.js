@@ -100,7 +100,7 @@ const Portfolio = () => {
                         {/* </Link> */}
                     </ImageContainer>
                     <TextContainer>
-                        <Title>User Authentication</Title>
+                        <Title>User Authenticated Pomodoro App</Title>
                         <ExternalLinksContainer>
                             <IconContainer>
                                 <Link href='https://github.com/wwangcode/planter_app' target='_blank'>
@@ -156,7 +156,7 @@ const SectionTitle = styled.div`
 const ImageContainer = styled.div`
     max-width: 30vw;
     margin: 0 auto;
-    border: 1px solid grey;
+    // border: 1px solid grey;
 `;
 
 const Link = styled.a`

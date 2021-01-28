@@ -14,6 +14,9 @@ const NavHeader = ({scrollTo}) => {
                 <Link onClick={() => {setSection('portfolio'); scrollTo('portfolio')}}>Work</Link>
                 <Link onClick={() => {setSection('about'); scrollTo('about')}}>About</Link>
                 <Link onClick={() => {setSection('contact'); scrollTo('contact')}}>Contact</Link>
+                <ResumeContainer>
+                    <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
+                </ResumeContainer>
             </LinkContainer>
         </Container>
     )
@@ -23,6 +26,17 @@ export default NavHeader
 
 // STYLED COMPONENTS
 
+const ResumeLink = styled.a`
+    background-color: rgba(236,9,36,.85);
+    border-radius: 1rem;
+    padding: .5rem;
+    font-size: 1.25rem;
+`;
+
+const ResumeContainer = styled.div`
+    margin-right: 2rem;
+    display: inline-block;
+`;
 
 const HomeLink = styled.div`
     border: 1px solid white;
@@ -43,6 +57,8 @@ const Link = styled.div`
     display: inline-block;
     margin: 0 2rem;
     cursor: pointer;
+    font-size: 1.25rem;
+
 `;
 
 const LinkContainer = styled.div`

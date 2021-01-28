@@ -1,13 +1,18 @@
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 
 const VerticalLinks = () => {
     return (
         <Container>
             <List>
+                <Item>
+                    <a href='mailto:wwangcode@gmail.com'>
+                        <FontAwesomeIcon icon={faEnvelope} size='1x' />
+                    </a>
+                </Item>
                 <Item>
                     <FontAwesomeIcon icon={faLinkedinIn} size='1x' />
                 </Item>
@@ -27,6 +32,7 @@ export default VerticalLinks
 const Item = styled.li`
     margin: 1rem;
     font-size: 1.5rem;
+    cursor: pointer;
 `;
 
 const List = styled.ul`
