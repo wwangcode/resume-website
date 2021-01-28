@@ -206,7 +206,7 @@ const Details = styled.div`
 `;
 
 const TextContainer = styled.div`
-    width: 35vw;
+    
 `;
 
 const ContentContainer = styled.div`
@@ -236,5 +236,6 @@ const Container = styled.main`
 
     ${TextContainer} {
         width: ${({isMobile}) => isMobile ? '95vw' : '35vw'};
-    }
+        margin-left: ${({isMobile}) => isMobile ? '' : '5rem'};
+    }   
 `;

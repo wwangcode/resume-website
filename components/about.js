@@ -34,6 +34,7 @@ const Container = styled.main`
     height: calc(100vh - 4rem);
     margin: 0 auto;
     width: 85%;
+    padding-top: 4rem;
 
     ${ImageContainer} {
         max-width: ${({isMobile}) => isMobile ? '95vw' : '30vw'};
