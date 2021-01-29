@@ -6,7 +6,7 @@ import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 
-const About = ({isMobile}) => {
+const About = ({isMobile, scrollTo}) => {
     return (
         <Container isMobile={isMobile}>
             <SectionTitle>About Me</SectionTitle>
@@ -16,7 +16,7 @@ const About = ({isMobile}) => {
                 </ImageContainer>
                 <TextContainer>
                     <Intro>
-                        “Hello! I'm William, a full-stack web developer based in Austin, TX”
+                        “Hello! I'm William, a <IntroSpan>full stack web developer</IntroSpan> based in Austin, TX”
                     </Intro>
                     <Body>
                         I enjoy creating user driven experiences that live on the internet.
@@ -71,22 +71,10 @@ const About = ({isMobile}) => {
                         <Item>Fusion.js</Item>
                     </List>
                 </ListContainer>
-
-                {/* <TechTag>Next.js</TechTag>
-                <TechTag>React</TechTag>
-                <TechTag>Javascript</TechTag>
-                <TechTag>HTML & CSS</TechTag>
-                <TechTag>Redux</TechTag>
-                <TechTag>Node.js</TechTag>
-                <TechTag>Django</TechTag>
-                <TechTag>Python</TechTag>
-                <TechTag>Fusion.js</TechTag>
-                <TechTag>SQL</TechTag> */}
-
-
-
             </StackContainer>
-
+            <ButtonContainer>
+                <SeeMore onClick={() => {scrollTo('portfolio')}}>Projects</SeeMore>
+            </ButtonContainer>
         </Container>
     )
 }
@@ -95,6 +83,26 @@ export default About
 
 
 // STYLED COMPONENTS 
+const SeeMore = styled.div`
+    margin-top: 3rem;
+    padding: 1rem;
+    font-size: 2rem;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid rgba(236,9,36,1);
+
+    }
+`;
+
+const ButtonContainer = styled.div`
+    margin: 0 auto;
+    text-align: center;
+`;
+
 const Item = styled.li`
     margin: 1rem;
     font-size: 1.5rem;
@@ -133,27 +141,14 @@ const StackContainer = styled.div`
     margin: 3rem auto 0 auto;
     text-align: center;
     max-width: 30rem;
-    border: 1px solid white;
+    // border: 1px solid white;
 `;
 
-
-const TechTag = styled.div`
-    background: rgba(50,50,50,1);    
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    border-radius: 10px;
-    font-weight: 500;
-    font-size: 1.25rem;
-    margin: 5px;
-    padding: 5px;
-    color: red;
-`;
 
 const TechTitle = styled.div`
     font-size: 2rem;
     font-weight: 500;
-    // display: inline-block;
+    color: rgba(236,9,36,.85);
 `;
 
 const Connect = styled.div`
@@ -190,6 +185,11 @@ const Intro = styled.div`
     color: rgba(255,255,255,.9);
 `;
 
+const IntroSpan = styled.span`
+    display: contents;
+    // color: rgba(236,9,36,.85);
+`;
+
 const Body = styled.div`
     font-size: 1.25rem;
     color: rgba(255,255,255, .8);
@@ -203,8 +203,10 @@ const TextContainer = styled.div`
 const SectionTitle = styled.div`
     margin: 0 auto;
     text-align: center;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 500;
+    color: rgba(236,9,36,.85);
+
     margin-bottom: 5rem;
 `;
 

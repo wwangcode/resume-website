@@ -69,9 +69,9 @@ const ContactForm = ({isMobile}) => {
 
     return (
         <Container>
+            <SectionTitle>Contact</SectionTitle>
             <FormContainer isMobile={isMobile} sendState={sendState}>
-                <SectionTitle>Contact</SectionTitle>
-
+                <FormTitle>Have a question or want work together?</FormTitle>
                     {sendState !== 'SUCCESS' && (
                         <>
                             <form method='POST'>  
@@ -123,7 +123,16 @@ export default ContactForm
 const SectionTitle = styled.div`
     margin: 0 auto;
     text-align: center;
-    font-size: 3rem;
+    font-size: 5rem;
+    font-weight: 500;
+    color: rgba(236,9,36,.85);
+    // margin-bottom: 5rem;
+`;
+
+const FormTitle = styled.div`
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.25rem;
     font-weight: 500;
 `;
 
@@ -264,6 +273,6 @@ const FormContainer = styled.div`
 const Container = styled.main`
     margin: 0 auto;
     text-align: center;
-    min-height: calc(100vh - 4rem);
+    // min-height: calc(100vh - 4rem);
     padding-top: 4rem;
 `;

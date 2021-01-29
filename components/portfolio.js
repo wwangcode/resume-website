@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
-const Portfolio = ({isMobile}) => {
+const Portfolio = ({isMobile, scrollTo}) => {
     // useEffect(() => {
     // }, [isMobile])
 
@@ -142,6 +142,9 @@ const Portfolio = ({isMobile}) => {
                     </TextContainer>
                 </ContentContainer>
             </ProjectContainer>
+            <ButtonContainer>
+                <SeeMore onClick={() => {scrollTo('contact')}}>Contact</SeeMore>
+            </ButtonContainer>
         </Container>
     )
 }
@@ -151,11 +154,33 @@ export default Portfolio
 
 
 // STYLED COMPONENTS
+
+const SeeMore = styled.div`
+    margin-top: 3rem;
+    padding: 1rem;
+    font-size: 2rem;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        border: 1px solid rgba(236,9,36,1);
+
+    }
+`;
+
+const ButtonContainer = styled.div`
+    margin: 0 auto;
+    text-align: center;
+`;
+
 const SectionTitle = styled.div`
     margin: 0 auto;
     text-align: center;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 500;
+    color: rgba(236,9,36,.85);
     margin-bottom: 5rem;
 `;
 
@@ -228,7 +253,7 @@ const ProjectContainer = styled.div`
 const Divider = styled.div`
     background-color: grey;
     height: 1px;
-    width: 20rem;
+    width: 25vw;
     margin: 4rem auto;
 `;
 

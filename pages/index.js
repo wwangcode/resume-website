@@ -51,14 +51,14 @@ const Home = ({isMobile}) => {
         </div>
         <Divider />
         <div ref={portfolioRef} section='portfolio'>
-          <Portfolio isMobile={isMobile} />
+          <Portfolio isMobile={isMobile} scrollTo={handleScrollToSection} />
         </div>
         <Divider />
         <div ref={contactRef} section='contact'>
           <Contact scrollTo={handleScrollToSection} />
         </div>
       </Container>
-      {/* <Footer /> */}
+      <Footer isMobile={isMobile} scrollTo={handleScrollToSection}/>
     </>
   )
 }
@@ -68,11 +68,23 @@ export default Home
 
 // STYLED COMPONENTS 
 
+const DownArrow = styled.div`
+  margin: 0 auto;
+  text-align: center;
+  font-size: 8rem;
+  width: 10rem;
+  line-height: 30%;
+  cursor: pointer;
+  &:hover {
+    color: rgba(236,9,36,.85); 
+  }
+`;
+
 const Divider = styled.div`
   background-color: grey;
   height: 1px;
-  width: 40rem;
-  margin: 10rem auto;
+  width: 50vw;
+  margin: 10rem auto 6rem auto;
 `;
 
 const Container = styled.div`

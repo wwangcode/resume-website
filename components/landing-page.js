@@ -13,7 +13,7 @@ const LandingPage = ({scrollTo, isMobile}) => {
             <Name>William Wang.</Name>
             <SubText>I create experiences for the web.</SubText>
 
-            <ScrollButton onClick={handleScrollTo}>See Work</ScrollButton>
+            <SeeMore onClick={handleScrollTo}>See More</SeeMore>
         </Container>
     )
 }
@@ -38,7 +38,7 @@ const Name = styled.div`
     font-weight: 700;
 `;
 
-const ScrollButton = styled.div`
+const SeeMore = styled.div`
     margin-top: 3rem;
     padding: 1rem;
     font-size: 2rem;

@@ -11,12 +11,18 @@ const NavHeader = ({ scrollTo, isMobile }) => {
         setIsOpen(!isOpen)
     }
 
+    const closeMenu = () => {
+        if (isOpen) {
+            setIsOpen(false)
+        }
+    }
+
     return (
         <Container>
             {!isMobile && (
                 <>
                     <HomeLinkContainer>
-                        <HomeLink onClick={() => {setSection('home'); scrollTo('home'); toggleMenu()}}>W.</HomeLink>
+                        <HomeLink onClick={() => {setSection('home'); scrollTo('home'); closeMenu()}}>W.</HomeLink>
                     </HomeLinkContainer>
                     <LinkContainer>
                         <Link onClick={() => {setSection('about'); scrollTo('about')}}>About</Link>
