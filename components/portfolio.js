@@ -58,6 +58,8 @@ const Portfolio = ({isMobile}) => {
                 </ContentContainer>
             </ProjectContainer>
 
+            <Divider></Divider>
+
             <ProjectContainer>
                 <ContentContainer>
                     <ImageContainer>
@@ -96,6 +98,8 @@ const Portfolio = ({isMobile}) => {
                     </TextContainer>
                 </ContentContainer>
             </ProjectContainer>
+
+            <Divider></Divider>
 
             <ProjectContainer>
                 <ContentContainer>
@@ -218,7 +222,14 @@ const ContentContainer = styled.div`
 const ProjectContainer = styled.div`
     margin: 0 auto;
     display: block;
-    margin-bottom: 5rem;
+    // margin-bottom: 5rem;
+`;
+
+const Divider = styled.div`
+    background-color: grey;
+    height: 1px;
+    width: 20rem;
+    margin: 4rem auto;
 `;
 
 const Container = styled.main`
@@ -231,11 +242,11 @@ const Container = styled.main`
     }
 
     ${ImageContainer} {
-        width: ${({isMobile}) => isMobile ? '95vw' : '35vw'};
+        width: ${({isMobile}) => isMobile ? '95vw' : '30rem'};
     }
 
     ${TextContainer} {
-        width: ${({isMobile}) => isMobile ? '95vw' : '35vw'};
+        width: ${({isMobile}) => isMobile ? '95vw' : '30rem'};
         margin-left: ${({isMobile}) => isMobile ? '' : '5rem'};
     }   
 `;

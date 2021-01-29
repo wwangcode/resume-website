@@ -11,7 +11,6 @@ const NavHeader = ({ scrollTo, isMobile }) => {
         setIsOpen(!isOpen)
     }
 
-
     return (
         <Container>
             {!isMobile && (
@@ -20,8 +19,8 @@ const NavHeader = ({ scrollTo, isMobile }) => {
                         <HomeLink onClick={() => {setSection('home'); scrollTo('home'); toggleMenu()}}>W.</HomeLink>
                     </HomeLinkContainer>
                     <LinkContainer>
-                        <Link onClick={() => {setSection('portfolio'); scrollTo('portfolio')}}>Work</Link>
                         <Link onClick={() => {setSection('about'); scrollTo('about')}}>About</Link>
+                        <Link onClick={() => {setSection('portfolio'); scrollTo('portfolio')}}>Work</Link>
                         <Link onClick={() => {setSection('contact'); scrollTo('contact')}}>Contact</Link>
                         <ResumeContainer>
                             <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
@@ -47,9 +46,12 @@ export default NavHeader
 
 const ResumeLink = styled.a`
     background-color: rgba(236,9,36,.85);
-    border-radius: 1rem;
-    padding: .5rem;
+    // color: black;
+    border-radius: 1.25rem;
+    padding: .5rem 1rem;
     font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 2px;
 
     &:hover {
         background-color: rgba(236,9,36,.6);
@@ -57,7 +59,7 @@ const ResumeLink = styled.a`
 `;
 
 const ResumeContainer = styled.div`
-    margin-right: 2rem;
+    margin: 0 2rem;
     display: inline-block;
 `;
 
@@ -65,11 +67,15 @@ const HomeLink = styled.div`
     border: 1px solid rgba(236,9,36,1);
     display: inline-block;
     cursor: pointer;
-    padding: .25rem .5rem;
+    padding: 0 .25rem;
     font-size: 2rem;
+    font-weight: 800;
+    color: rgba(236,9,36,1);
+
 
     &:hover {
-        color: rgba(236,9,36,1)
+        // color: rgba(236,9,36,1);
+        color: white;
     }
 `;
 
@@ -87,7 +93,7 @@ const Link = styled.div`
     font-size: 1.25rem;
 
     &:hover {
-        color: grey;
+        color: rgba(236,9,36,1);
     }
 `;
 

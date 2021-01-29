@@ -46,12 +46,14 @@ const Home = ({isMobile}) => {
         <div ref={landingPageRef} section='home'>
           <LandingPage scrollTo={handleScrollToSection} isMobile={isMobile}/>  
         </div>
-        <div ref={portfolioRef} section='portfolio'>
-          <Portfolio isMobile={isMobile} />
-        </div>
         <div ref={aboutRef} section='about'>
           <About scrollTo={handleScrollToSection} isMobile={isMobile}/>
         </div>
+        <Divider />
+        <div ref={portfolioRef} section='portfolio'>
+          <Portfolio isMobile={isMobile} />
+        </div>
+        <Divider />
         <div ref={contactRef} section='contact'>
           <Contact scrollTo={handleScrollToSection} />
         </div>
@@ -66,7 +68,13 @@ export default Home
 
 // STYLED COMPONENTS 
 
-const Container = styled.div`
+const Divider = styled.div`
+  background-color: grey;
+  height: 1px;
+  width: 40rem;
+  margin: 10rem auto;
+`;
 
+const Container = styled.div`
 
 `;

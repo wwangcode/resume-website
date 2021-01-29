@@ -164,6 +164,8 @@ const StyledTextArea = styled.textarea`
     color: black;
     font-size: 1.25em;
     font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
     resize: vertical;
 
@@ -217,7 +219,7 @@ const MessageContainer = styled.div`
 `;
 
 const SendButtonContainer = styled.div`
-    // margin: .5em auto;
+    margin-bottom: .5rem;
 `;
 
 const ErrorMessage = styled.div`
@@ -228,27 +230,27 @@ const ErrorMessage = styled.div`
 const FormContainer = styled.div`
     text-align: center;
     margin: 0 auto;
-    padding: .5rem;
+    padding: .25rem;
 
     border: 1px solid rgba(255,255,255,1);
     border-radius: 6px;
 
-    width: ${({isMobile}) => isMobile ? `21em` : `35em`};
+    width: ${({isMobile}) => isMobile ? `` : `32em`};
 
     ${StyledInput} {
-        width: ${({isMobile}) => isMobile ? `98%` : `90%`};
+        width: ${({isMobile}) => isMobile ? `95%` : `80%`};
         text-align: ${({isMobile}) => isMobile ? `left` : `left`};
         padding: ${({isMobile}) => isMobile ? '.35em .75em' : '.5em 1em'};
     }
 
     ${StyledTextArea} {
-        width: ${({isMobile}) => isMobile ? `98%` : `90%`};
-        height: ${({isMobile}) => isMobile ? `8em` : `10em`};
+        width: ${({isMobile}) => isMobile ? `95%` : `80%`};
+        height: ${({isMobile}) => isMobile ? `6em` : `8em`};
         padding: ${({isMobile}) => isMobile ? '.35em .75em' : '.5em 1em'};
     }
 
     ${StyledSubmitButton} {
-        // background-color: ${({sendState}) => sendState === 'SUCCESS' ? `rgb(10,10,10)` : `rgba(236,9,36,.7)`};
+        // background-color: ${({sendState}) => sendState === 'SUCCESS' ? `rgb(0,0,0)` : `rgba(236,9,36,.7)`};
         // color: ${({sendState}) => sendState === 'SUCCESS' ? `rgba(255,255,255,.8)` : `rgba(255,255,255,1)`};
         cursor: ${({sendState}) => sendState === 'SUCCESS' ? `default` : `pointer`};
         padding: ${({isMobile}) => isMobile ? '.75em 1em' : '.5em 1em'};

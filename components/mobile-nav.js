@@ -14,8 +14,9 @@ export const MobileNav = ({ isOpen, toggleMenu, scrollTo }) => {
                 <>
                     <VerticalLinks />
                     <StyledMenu isOpen={isOpen}>
-                        <Link onClick={() => {scrollTo('portfolio'); toggleMenu()}}>Work</Link>
+                        <Link onClick={() => {scrollTo('home'); toggleMenu()}}>Home</Link>
                         <Link onClick={() => {scrollTo('about'); toggleMenu()}}>About</Link>
+                        <Link onClick={() => {scrollTo('portfolio'); toggleMenu()}}>Work</Link>
                         <Link onClick={() => {scrollTo('contact'); toggleMenu()}}>Contact</Link>
                         <ResumeContainer>
                                 <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
