@@ -169,11 +169,11 @@ const Tag = styled.div`
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1rem;
     // font-weight: 500;
     font-size: 1rem;
     margin: 5px;
-    padding: 5px;
+    padding: 5px 8px;
 `;
 
 const TagContainer = styled.div``

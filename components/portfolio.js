@@ -210,10 +210,10 @@ const TechTag = styled.div`
     text-decoration: none;
     display: inline-block;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 1rem;
     font-weight: 400;
     margin: 5px;
-    padding: 5px;
+    padding: 5px 8px;
 
     // color: rgba(255,255,255,.7);
 `;
