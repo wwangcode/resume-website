@@ -80,7 +80,7 @@ const Container = styled.main`
     align-items: flex-start;
     justify-content: center;
 
-    padding-left: ${({isMobile}) => isMobile ? '' : '15rem'};
+    padding-left: ${({isMobile}) => isMobile ? '' : '20vw'};
 
     ${Name} {
         font-size: ${({isMobile}) => isMobile ? '5rem' : '6rem'};

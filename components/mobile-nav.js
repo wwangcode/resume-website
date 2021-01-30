@@ -19,7 +19,7 @@ export const MobileNav = ({ isOpen, toggleMenu, scrollTo }) => {
                         <Link onClick={() => {scrollTo('portfolio'); toggleMenu()}}>Work</Link>
                         <Link onClick={() => {scrollTo('contact'); toggleMenu()}}>Contact</Link>
                         <ResumeContainer>
-                                <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
+                            <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
                         </ResumeContainer>
                     </StyledMenu>
                 </>
