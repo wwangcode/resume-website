@@ -110,7 +110,7 @@ const Portfolio = ({isMobile, scrollTo}) => {
                         {/* </Link> */}
                     </ImageContainer>
                     <TextContainer>
-                        <Title>Serverless API</Title>
+                        <Title>Serverless REST API</Title>
                         <ExternalLinksContainer>
                             <IconContainer>
                                 <Link href='https://github.com/wwangcode' target='_blank'>
@@ -119,7 +119,7 @@ const Portfolio = ({isMobile, scrollTo}) => {
                             </IconContainer>
                         </ExternalLinksContainer>
                         <Details>
-                            Serverless API serves JSON data for photography blog front end (see above). 
+                            Serverless REST API serves JSON data for photography blog front end (see above). 
                             Supports tag filtering through relational database modeling; connects photos, galleries, and tags
                             Deployed using serverless functions via AWS Lambda through API Gateway. 
                             Database and images stored on S3.
