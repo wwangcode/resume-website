@@ -64,47 +64,6 @@ const Portfolio = ({isMobile, scrollTo}) => {
                 <ContentContainer>
                     <ImageContainer>
                         {/* <Link href='https://wwangphoto.com' target='_blank'> */}
-                            <Image src='/images/custom-api.jpg' alt='wwangphoto.com' width='1687' height='1047' />
-                        {/* </Link> */}
-                    </ImageContainer>
-                    <TextContainer>
-                        <Title>Custom Photos API</Title>
-                        <ExternalLinksContainer>
-                            <IconContainer>
-                                <Link href='https://github.com/wwangcode' target='_blank'>
-                                    <FontAwesomeIcon icon={faGithub} size='1x' />
-                                </Link>
-                            </IconContainer>
-                            {/* <IconContainer>
-                                <Link href='https://wwangphoto.com' target='_blank'>
-                                    <FontAwesomeIcon icon={faExternalLinkAlt} size='1x' />
-                                </Link>
-                            </IconContainer> */}
-                        </ExternalLinksContainer>
-                        <Details>
-                            API serves JSON data for front end (see above photography blog). 
-                            Using relational database modeling to connect photos, galleries, and tags. 
-                            Deployed using serverless functions via AWS Lambda.
-                            Database and images hosted on S3.
-                        </Details>
-                        <StackContainer>
-                            <TechTag>Django</TechTag>
-                            <TechTag>Python</TechTag>
-                            <TechTag>SQLite</TechTag>
-                            <TechTag>AWS Lambda</TechTag>
-                            <TechTag>AWS S3</TechTag>
-                        </StackContainer>
-                        {/* <TextHeader>Technologies Used:</TextHeader> */}
-                    </TextContainer>
-                </ContentContainer>
-            </ProjectContainer>
-
-            <Divider></Divider>
-
-            <ProjectContainer>
-                <ContentContainer>
-                    <ImageContainer>
-                        {/* <Link href='https://wwangphoto.com' target='_blank'> */}
                             <Image src='/images/planter.jpg' alt='wwangphoto.com' width='3218' height='1890' />
                         {/* </Link> */}
                     </ImageContainer>
@@ -142,6 +101,42 @@ const Portfolio = ({isMobile, scrollTo}) => {
                     </TextContainer>
                 </ContentContainer>
             </ProjectContainer>
+
+            <Divider></Divider>
+
+            <ProjectContainer>
+                <ContentContainer>
+                    <ImageContainer>
+                        {/* <Link href='https://wwangphoto.com' target='_blank'> */}
+                            <Image src='/images/custom-api.jpg' alt='wwangphoto.com' width='1687' height='1047' />
+                        {/* </Link> */}
+                    </ImageContainer>
+                    <TextContainer>
+                        <Title>Custom Photos API</Title>
+                        <ExternalLinksContainer>
+                            <IconContainer>
+                                <Link href='https://github.com/wwangcode' target='_blank'>
+                                    <FontAwesomeIcon icon={faGithub} size='1x' />
+                                </Link>
+                            </IconContainer>
+                        </ExternalLinksContainer>
+                        <Details>
+                            API serves JSON data for front end (see above photography blog). 
+                            Using relational database modeling to connect photos, galleries, and tags. 
+                            Deployed using serverless functions via AWS Lambda.
+                            Database and images stored on S3.
+                        </Details>
+                        <StackContainer>
+                            <TechTag>Django</TechTag>
+                            <TechTag>Python</TechTag>
+                            <TechTag>SQLite</TechTag>
+                            <TechTag>AWS Lambda</TechTag>
+                            <TechTag>AWS S3</TechTag>
+                        </StackContainer>
+                    </TextContainer>
+                </ContentContainer>
+            </ProjectContainer>
+
             <ButtonContainer>
                 <SeeMore onClick={() => {scrollTo('contact')}}>Contact</SeeMore>
             </ButtonContainer>
