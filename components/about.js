@@ -124,10 +124,10 @@ const List = styled.ul`
     list-style-type: '▹';
     margin: 0 1rem;
 
-    ${Item}&&::before {
-        list-style-type: '▹';
-        color: rgba(236,9,36,1);
-    }
+    // ${Item}::before {
+    //     list-style-type: '▹';
+    //     color: rgba(236,9,36,1);
+    // }
 `;
 
 const ListContainer = styled.div`

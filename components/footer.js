@@ -9,12 +9,12 @@ const Footer = ({isMobile, scrollTo}) => {
             </ButtonContainer>
             <Link href='https://linkedin.com/in/wwangconnect'>Linkedin</Link>
             &nbsp;&nbsp;|&nbsp;&nbsp;
+            <Link href='mailto:wwangcode@gmail.com'>Email</Link>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
             <Link href='https://github.com/wwangcode'>Github</Link>
             <br />
             <br />
-            &#169; William Wang 2021
-            <br />
-            Austin, TX, USA
+            Austin, TX, USA&nbsp;&nbsp;|&nbsp;&nbsp;&#169;&nbsp;William Wang 2021
         </Container>
     )
 }
@@ -43,7 +43,7 @@ const SeeMore = styled.div`
 
     &:hover {
         border: 1px solid white;
-
+        color: white;
     }
 `;
 
