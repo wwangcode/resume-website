@@ -119,7 +119,7 @@ const Container = styled.nav`
     width: 100vw;
     height: 4rem;
     margin: 0 auto;
-    
+
     // DISABLE TEXT HIGHLIGHTING
     -webkit-user-select: none;
     -moz-user-select: none;
