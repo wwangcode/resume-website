@@ -12,7 +12,11 @@ const LandingPage = ({scrollTo, isMobile}) => {
             <Intro>Hi, my name is</Intro>
             <Name>William Wang.</Name>
             <SubText>I create experiences for the web.</SubText>
-
+            {isMobile && (
+                <ResumeContainer>
+                    <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
+                </ResumeContainer>
+            )}
             <SeeMore onClick={handleScrollTo}>See More</SeeMore>
         </Container>
     )
@@ -22,6 +26,18 @@ export default LandingPage
 
 
 // STYLED COMPONENTS
+const ResumeLink = styled.a`
+    background-color: rgba(236,9,36,.85);
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+`;
+
+const ResumeContainer = styled.div`
+    display: block;
+    margin-top: 3rem;
+`;
+
 const Intro = styled.div`
     font-size: 1.5rem;
     font-weight: 500;
