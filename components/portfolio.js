@@ -21,7 +21,7 @@ const Portfolio = ({isMobile, scrollTo}) => {
                         </Link>
                     </ImageContainer>
                     <TextContainer>
-                        <Title>Photography Blog</Title>
+                        <Title>Mobile Optimized Photography Blog</Title>
                         <ExternalLinksContainer>
                             <IconContainer>
                                 <Link href='https://github.com/wwangcode' target='_blank'>
@@ -35,13 +35,13 @@ const Portfolio = ({isMobile, scrollTo}) => {
                             </IconContainer>
                         </ExternalLinksContainer>
                         <Details>
-                            Mobile optimized responsive photography blog website. 
-                            Pages are static site generated to improve SEO and page load performance. 
-                            Images are lazy loaded, optimized on demand and cached on the content delivery network using Next.js.
-                            Full screen images are dynamically sized to fit the dimensions of the viewport without the need to scroll.
-                            Images and details are served from custom built API (see below custom photos API).
-                            Email subscription sign-up connected via MailChimp API.
-                            Contact form connected through Nodemailer.
+                            End-to-end design and development of full-stack, static site generated photography blog for personal use.
+                            Features mobile-friendly and responsive UI displaying lazy loaded images optimized on demand and cached in CDN. 
+                            Full screen images dynamically sized to fit the dimensions of the viewport without scrolling.
+                            Backed by serverless API (see below).
+                            Tagging functionality for filtering photos.  
+                            Email subscription sign-up feature connected via MailChimp API.
+                            Contact form connected through Nodemailer. 
                             Deployed on Vercel.
                         </Details>
                         <StackContainer>
@@ -82,19 +82,17 @@ const Portfolio = ({isMobile, scrollTo}) => {
                             </IconContainer> */}
                         </ExternalLinksContainer>
                         <Details>
-                            Pomodoro timer app wrapped in user authention layer.
-                            Users can login or register.
-                            Session authentication is handled using JWT tokens through custom fusion.js middleware plugin.
-                            Data served via Django Rest Framework from SQLite database.
-                            Database stores user account, profile, and timer data; supports CRUD operations
-                            RPC calls are sent through Django to save Pomodoro session details and update user data.
-                            App state is managed using Redux.
+                            Responsive full-stack Pomodoro timer app with user authentication handled via JWT authentication tokens. 
+                            Authenticated user data served via Django Rest Framework from SQLite database; supports CRUD operations.
+                            RPC calls fired to Django to handle updating and saving user's timer data.
+                            Uses Fusion.js for serverside rendering and handling token authentication middleware and RPC calls. 
+                            App state is managed using Redux. 
                         </Details>
                         <StackContainer>
-                            <TechTag>Fusion.js</TechTag>
                             <TechTag>React</TechTag>
                             <TechTag>Redux</TechTag>
                             <TechTag>Node.js</TechTag>
+                            <TechTag>Fusion.js</TechTag>
                             <TechTag>Django Rest Framework</TechTag>
                             <TechTag>Python</TechTag>
                         </StackContainer>
@@ -112,7 +110,7 @@ const Portfolio = ({isMobile, scrollTo}) => {
                         {/* </Link> */}
                     </ImageContainer>
                     <TextContainer>
-                        <Title>Custom Photos API</Title>
+                        <Title>Serverless API</Title>
                         <ExternalLinksContainer>
                             <IconContainer>
                                 <Link href='https://github.com/wwangcode' target='_blank'>
@@ -121,9 +119,9 @@ const Portfolio = ({isMobile, scrollTo}) => {
                             </IconContainer>
                         </ExternalLinksContainer>
                         <Details>
-                            API serves JSON data for front end (see above photography blog). 
-                            Using relational database modeling to connect photos, galleries, and tags. 
-                            Deployed using serverless functions via AWS Lambda.
+                            Serverless API serves JSON data for photography blog front end (see above). 
+                            Supports tag filtering through relational database modeling; connects photos, galleries, and tags
+                            Deployed using serverless functions via AWS Lambda through API Gateway. 
                             Database and images stored on S3.
                         </Details>
                         <StackContainer>
@@ -132,6 +130,7 @@ const Portfolio = ({isMobile, scrollTo}) => {
                             <TechTag>SQLite</TechTag>
                             <TechTag>AWS Lambda</TechTag>
                             <TechTag>AWS S3</TechTag>
+                            <TechTag>API Gateway</TechTag>
                         </StackContainer>
                     </TextContainer>
                 </ContentContainer>
