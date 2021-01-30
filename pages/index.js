@@ -67,19 +67,6 @@ export default Home
 
 
 // STYLED COMPONENTS 
-
-const DownArrow = styled.div`
-  margin: 0 auto;
-  text-align: center;
-  font-size: 8rem;
-  width: 10rem;
-  line-height: 30%;
-  cursor: pointer;
-  &:hover {
-    color: rgba(236,9,36,.85); 
-  }
-`;
-
 const Divider = styled.div`
   background-color: grey;
   height: 1px;

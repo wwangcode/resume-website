@@ -56,7 +56,7 @@ const Container = styled.footer`
     padding-bottom: 3rem;
     margin: 0 auto;
     margin-top: 5rem;
-    border-top: 1px solid grey;
+    border-top: 1px solid rgba(255,255,255,.2);
     color: grey;
     text-align: center;
 `;
