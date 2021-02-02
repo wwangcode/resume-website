@@ -59,4 +59,10 @@ const Container = styled.footer`
     border-top: 1px solid rgba(255,255,255,.2);
     color: grey;
     text-align: center;
+
+    // DISABLE TEXT HIGHLIGHTING
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `;

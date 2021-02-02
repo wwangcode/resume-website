@@ -5,7 +5,7 @@ import '../styles/globals.css'
 
 
 function MyApp({ Component, pageProps }) {
-  const [ isMobile, setIsMobile ] = useState(true)
+  const [ isMobile, setIsMobile ] = useState(false)
   const [ isClient, setIsClient ] = useState(false)
 
   useEffect(() => {

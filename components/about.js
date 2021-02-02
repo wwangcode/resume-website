@@ -12,7 +12,7 @@ const About = ({isMobile, scrollTo}) => {
             <SectionTitle>About Me</SectionTitle>
             <ContentContainer>
                 <ImageContainer>
-                    <Image src='/images/about-photo.jpg' width='4176' height='4423' />
+                    <Image src='/images/about-photo.jpg' width='2000' height='2121' />
                 </ImageContainer>
                 <TextContainer>
                     <Intro>
@@ -101,6 +101,12 @@ const SeeMore = styled.div`
 const ButtonContainer = styled.div`
     margin: 0 auto;
     text-align: center;
+
+    // DISABLE TEXT HIGHLIGHTING
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `;
 
 const Item = styled.li`
@@ -162,6 +168,12 @@ const Link = styled.div`
     font-size: 1.5rem;
     cursor: pointer;
     display: inline-block;
+
+    // DISABLE TEXT HIGHLIGHTING
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `;
 
 const Tag = styled.div`

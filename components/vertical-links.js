@@ -68,6 +68,12 @@ const Container = styled.nav`
     display: block;
     background-color: transparent;
 
+    // DISABLE TEXT HIGHLIGHTING
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
 
     &:after {
         content: "";

@@ -167,6 +167,12 @@ const SeeMore = styled.div`
 const ButtonContainer = styled.div`
     margin: 0 auto;
     text-align: center;
+
+    // DISABLE TEXT HIGHLIGHTING
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `;
 
 const SectionTitle = styled.div`
@@ -196,6 +202,12 @@ const IconContainer = styled.div`
     font-size: 1.5rem;
     margin-right: 2rem;
     margin-bottom: 1rem;
+
+    // DISABLE TEXT HIGHLIGHTING
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `;
 
 const ExternalLinksContainer = styled.div`

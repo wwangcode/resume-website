@@ -90,7 +90,7 @@ const ResumeLink = styled.a`
 
 const ResumeContainer = styled.div`
     display: block;
-    margin-top: 15vh;
+    margin-top: 8vh;
 `;
 
 const Link = styled.div`
@@ -116,4 +116,10 @@ const StyledMenu = styled.div`
     position: relative;
     top: 0;
     right: 0;
+
+    // DISABLE TEXT HIGHLIGHTING
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `;

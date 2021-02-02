@@ -275,4 +275,10 @@ const Container = styled.main`
     text-align: center;
     // min-height: calc(100vh - 4rem);
     padding-top: 4rem;
+
+    // DISABLE TEXT HIGHLIGHTING
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 `;
