@@ -17,7 +17,7 @@ const Portfolio = ({isMobile, scrollTo}) => {
                 <ContentContainer>
                     <ImageContainer>
                         <Link href='https://wwangphoto.com' target='_blank'>
-                            <Image src='/images/wwangphoto-desktop.jpg' alt='wwangphoto.com' width='3840' height='2188' />
+                            <Image src='/images/wwangphoto-desktop.jpg' alt='wwangphoto.com' width='2000' height='1140' />
                         </Link>
                     </ImageContainer>
                     <TextContainer>
@@ -64,7 +64,7 @@ const Portfolio = ({isMobile, scrollTo}) => {
                 <ContentContainer>
                     <ImageContainer>
                         {/* <Link href='https://wwangphoto.com' target='_blank'> */}
-                            <Image src='/images/planter.jpg' alt='wwangphoto.com' width='3218' height='1890' />
+                            <Image src='/images/planter.jpg' alt='wwangphoto.com' width='2000' height='1175' />
                         {/* </Link> */}
                     </ImageContainer>
                     <TextContainer>

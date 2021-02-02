@@ -20,10 +20,10 @@ const About = ({isMobile, scrollTo}) => {
                     </Intro>
                     <Body>
                         I enjoy creating user driven experiences that live on the internet.
-                        My goal is to always strive to build products that are simple and a joy to use.
+                        My goal is to always build products that are simple and a joy to use.
                         <br />
                         <br />
-                        I am currently seeking opportunites to expand my skillset and utilize my creativity to build meaningful products.
+                        Currently I am seeking opportunites to expand my skillset and utilize my creativity to build meaningful products.
                         I welcome the chance to further discuss my experiences to see if there is an opportunity to build something amazing together!
                         <br />
                         <br />

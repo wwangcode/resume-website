@@ -12,11 +12,11 @@ const LandingPage = ({scrollTo, isMobile}) => {
             <Intro>Hi, my name is</Intro>
             <Name>William Wang.</Name>
             <SubText>I build experiences for the web.</SubText>
-            {isMobile && (
-                <ResumeContainer>
-                    <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
-                </ResumeContainer>
-            )}
+            {/* {isMobile && ( */}
+            <ResumeContainer>
+                <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
+            </ResumeContainer>
+            {/* )} */}
             <SeeMore onClick={handleScrollTo}>See More</SeeMore>
         </Container>
     )
