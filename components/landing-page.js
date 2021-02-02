@@ -11,7 +11,7 @@ const LandingPage = ({scrollTo, isMobile}) => {
         <Container isMobile={isMobile}>
             <Intro>Hi, my name is</Intro>
             <Name>William Wang.</Name>
-            <SubText>I create experiences for the web.</SubText>
+            <SubText>I build experiences for the web.</SubText>
             {isMobile && (
                 <ResumeContainer>
                     <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
