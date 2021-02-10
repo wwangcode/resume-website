@@ -78,7 +78,7 @@ const ContactForm = ({isMobile}) => {
                                 <NameContainer>
                                     {/* <StyledLabel htmlFor='name'>NAME</StyledLabel> */}
                                     {/* <br /> */}
-                                    <StyledInput type='text' value={name} onChange={handleNameInput} placeholder='Name'/>
+                                    <StyledInput type='text' value={name} onChange={handleNameInput} placeholder='Full Name'/>
                                 </NameContainer>
                                 <EmailContainer>
                                     {/* <StyledLabel htmlFor='email'>EMAIL</StyledLabel> */}
