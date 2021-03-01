@@ -91,5 +91,11 @@ const Container = styled.main`
     ${Name} {
         font-size: ${({isMobile}) => isMobile ? '5rem' : '6rem'};
     }
+
+    ${ResumeLink} {
+        &:hover {
+            background-color: ${({isMobile}) => isMobile ? '' : 'rgba(236,9,36,.6)'};
+        }
+    }
 `;
 
