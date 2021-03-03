@@ -6,7 +6,6 @@ export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
-    const GA_PROPERTY_ID = process.env.GA_PROPERTY_ID
     try {
       ctx.renderPage = () =>
         originalRenderPage({
@@ -33,7 +32,7 @@ export default class MyDocument extends Document {
   }
   render() {
     const { isProduction } = this.props
-
+    const GA_PROPERTY_ID = process.env.GA_PROPERTY_ID
     return (
       <Html lang="en">
         <Head>
