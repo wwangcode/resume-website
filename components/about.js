@@ -19,12 +19,14 @@ const About = ({isMobile, scrollTo}) => {
                         “Hello! I'm William, a <IntroSpan>full stack web developer</IntroSpan> based in Austin, TX”
                     </Intro>
                     <Body>
-                        I enjoy creating user driven experiences that live on the internet.
-                        My goal is to always build products that are simple and a joy to use.
+                        I enjoy creating seamless user driven experiences that are intuitive and a joy to use and have experience designing and building end-to-end, mobile first, and responsive full-stack web applications.
                         <br />
                         <br />
-                        Currently I am seeking opportunites to expand my skillset and utilize my creativity to build meaningful products.
-                        I welcome the chance to further discuss my experiences to see if there is an opportunity to build something amazing together!
+                        During my current role at Iternal Technologies, I was charged with developing innovative solutions across all levels of the tech stack. I played an instrumental role in securing a contract with a Fortune 50 company by successfully developing and delivering on time a user accountability layer that exceeded our client's needs. This full-stack event audit log monitored, recorded, and queried user and system driven events in our SaaS application. I also played a primary role in the design and development of our user facing search engine application by building out the front end with a strong focus on UX/UI design and connecting it to our database layer. 
+                        <br />
+                        <br />
+                        I have a passion for all things tech, and am eager to seek out opportunities to expand my skill set and utilize my creativity to develop innovative solutions. I welcome the opportunity to further discuss my experiences to see if there is an opportunity to build something amazing together!
+
                         <br />
                         <br />
                         <Connect>Connect with me:</Connect>
