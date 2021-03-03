@@ -71,7 +71,8 @@ const ContactForm = ({isMobile}) => {
         <Container>
             <SectionTitle>Contact</SectionTitle>
             <FormContainer isMobile={isMobile} sendState={sendState}>
-                <FormTitle>Have a question or want work together?</FormTitle>
+                {sendState !== 'SUCCESS' && (<FormTitle>Have a question or an opportunity I can help with?</FormTitle>)}
+                {/* <FormTitle>Have a question or want work together?</FormTitle> */}
                     {sendState !== 'SUCCESS' && (
                         <>
                             <form method='POST'>  
@@ -97,7 +98,9 @@ const ContactForm = ({isMobile}) => {
                                 </MessageContainer>
                                 <ErrorMessage>{errorMessage}</ErrorMessage>             
                                 <SendButtonContainer>
-                                    <StyledSubmitButton type='submit' disabled={sendState === 'SUCCESS' ? true : false} value={sendText} onClick={handleSubmit}/>
+                                    {/* <StyledSubmitButton type='submit' disabled={sendState === 'SUCCESS' ? true : false} value={sendText} onClick={handleSubmit}/> */}
+                                    <StyledSubmitButton  sendState={sendState} onClick={handleSubmit}>{sendText}</StyledSubmitButton>
+
                                 </SendButtonContainer>
                             </form>
                         </>
@@ -186,21 +189,24 @@ const StyledTextArea = styled.textarea`
     }
 `;
 
-const StyledSubmitButton = styled.input`
+const StyledSubmitButton = styled.div`
     margin: 0 auto;
     background-color: rgba(236,9,36,.85);
-    color: rgba(255,255,255,1);
+    color: ${({sendState}) => sendState !== 'SUCCESS' ? 'rgba(255,255,255,1)' : 'grey'};
     font-weight: 500;
     font-size: 1.5em;
 
     border-radius: 10px;
+    // border: ${({sendState}) => sendState === 'SUCCESS' ? '1px solid grey' : '1px solid rgba(236,9,36,.8)'};
     outline: none;
 
-    cursor: pointer;
+    cursor: ${({sendState}) => sendState !== 'SUCCESS' ? 'pointer' : 'default'};
 
-    
-    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
+
 
 const StyledLabel = styled.label`
     font-size: 2em;
@@ -263,6 +269,7 @@ const FormContainer = styled.div`
         // color: ${({sendState}) => sendState === 'SUCCESS' ? `rgba(255,255,255,.8)` : `rgba(255,255,255,1)`};
         cursor: ${({sendState}) => sendState === 'SUCCESS' ? `default` : `pointer`};
         padding: ${({isMobile}) => isMobile ? '.75em 1em' : '.5em 1em'};
+        width: ${({isMobile}) => isMobile ? '14rem' : '18rem'};
 
         &: hover {
             background-color: ${({sendState}) => sendState === 'SUCCESS' ? `` : `rgba(236,9,36,.6)`};

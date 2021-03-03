@@ -12,12 +12,10 @@ const LandingPage = ({scrollTo, isMobile}) => {
             <Intro>Hi, my name is</Intro>
             <Name>William Wang.</Name>
             <SubText>I build experiences for the web.</SubText>
-            {/* {isMobile && ( */}
-            <ResumeContainer>
-                <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
-            </ResumeContainer>
-            {/* )} */}
-            <SeeMore onClick={handleScrollTo}>See More</SeeMore>
+                <ResumeContainer>
+                    <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
+                </ResumeContainer>
+                <SeeMore onClick={handleScrollTo}>See More</SeeMore>
         </Container>
     )
 }
@@ -69,11 +67,11 @@ const SeeMore = styled.div`
     }
 `;
 
-
 const Container = styled.main`
     min-height: calc(100vh - 4rem);
     width: 85%;
     margin: 0 auto;
+    padding-bottom: 13rem;
 
     display: flex;
     flex-direction: column;
