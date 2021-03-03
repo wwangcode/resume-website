@@ -1,8 +1,13 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
+import * as gtag from '../components/utils/gtag'
+import Router from 'next/router'
+
 import BaseLayout from '../constants/styles/base-layout'
 import '../styles/globals.css'
 
+// triggers pageview event on route change
+Router.events.on('routeChangeComplete', (url) => gtag.pageview(url))
 
 function MyApp({ Component, pageProps }) {
   const [ isMobile, setIsMobile ] = useState(false)
