@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import { ServerStyleSheet } from 'styled-components'
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
