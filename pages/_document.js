@@ -14,10 +14,10 @@ export default class MyDocument extends Document {
         });
 
       const initialProps = await Document.getInitialProps(ctx);
-      const isProduction = process.env.NODE_ENV === 'production'
+      // const isProduction = process.env.NODE_ENV === 'production'
       return {
         ...initialProps,
-        isProduction,
+        // isProduction,
         styles: (
           <>
             {initialProps.styles}
@@ -31,7 +31,8 @@ export default class MyDocument extends Document {
     }
   }
   render() {
-    const { isProduction } = this.props
+    // const { isProduction } = this.props
+    const NODE_ENV = process.env.NODE_ENV
     const GA_PROPERTY_ID = process.env.GA_PROPERTY_ID
     return (
       <Html lang="en">
@@ -39,7 +40,7 @@ export default class MyDocument extends Document {
           {/* <link rel="shortcut icon" type="image/x-icon" href={FavIcon} /> */}
 
           {/* We only want to add the scripts if in production */}
-          {isProduction && (
+          {NODE_ENV === 'production' && (
             <Fragment>
               {/* Global Site Tag (gtag.js) - Google Analytics */}
               <script
