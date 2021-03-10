@@ -16,18 +16,58 @@ const Portfolio = ({isMobile, scrollTo}) => {
             <ProjectContainer>
                 <ContentContainer>
                     <ImageContainer>
+                        <Link href='https://videoroom.vercel.app/' target='_blank'>
+                            <Image src='/images/videoroom.png' alt='videoroom.vercel.app/' width='2000' height='1104' />
+                        </Link>
+                    </ImageContainer>
+                    <TextContainer>
+                        <Title>Realtime Video Streaming Application</Title>
+                        <ExternalLinksContainer>
+                            <IconContainer>
+                                <Link href='https://github.com/wwangcode/video-chat-app' target='_blank'>
+                                    <FontAwesomeIcon icon={faGithub} size='1x' />
+                                </Link>
+                            </IconContainer>
+                            <IconContainer>
+                                <Link href='https://videoroom.vercel.app/' target='_blank'>
+                                    <FontAwesomeIcon icon={faExternalLinkAlt} size='1x' />
+                                </Link>
+                            </IconContainer>
+                        </ExternalLinksContainer>
+                        <Details>
+                            Real time communications streaming web application platform that supports video chat to connect online. Supports creation and sharing of chat rooms. 
+                            Unique user channel and application authorization tokens generated on Node.js backend endpoint. Token server is deployed using serverless functions on Vercel.
+                            Live video streaming implemented using Agora API. Microphone and camera on/off functionality added for users local stream. 
+                        </Details>
+                        <StackContainer>
+                            <TechTag>Next.js</TechTag>
+                            <TechTag>React</TechTag>
+                            <TechTag>Node.js</TechTag>
+                            <TechTag>Styled-Components</TechTag>
+                            <TechTag>Agora API</TechTag>
+                            <TechTag>Vercel</TechTag>
+                        </StackContainer>
+                    </TextContainer>
+                </ContentContainer>
+            </ProjectContainer>
+
+            <Divider></Divider>
+
+            <ProjectContainer>
+                <ContentContainer>
+                    <ImageContainer>
                         <Link href='https://wwangphoto.com' target='_blank'>
-                            <Image src='/images/wwangphoto-desktop.jpg' alt='wwangphoto.com' width='2000' height='1140' />
+                            <Image src='/images/wwangphoto.png' alt='wwangphoto.com' width='2000' height='1141' />
                         </Link>
                     </ImageContainer>
                     <TextContainer>
                         <Title>Mobile Optimized Photography Blog</Title>
                         <ExternalLinksContainer>
-                            <IconContainer>
+                            {/* <IconContainer>
                                 <Link href='https://github.com/wwangcode' target='_blank'>
                                     <FontAwesomeIcon icon={faGithub} size='1x' />
                                 </Link>
-                            </IconContainer>
+                            </IconContainer> */}
                             <IconContainer>
                                 <Link href='https://wwangphoto.com' target='_blank'>
                                     <FontAwesomeIcon icon={faExternalLinkAlt} size='1x' />
@@ -35,14 +75,16 @@ const Portfolio = ({isMobile, scrollTo}) => {
                             </IconContainer>
                         </ExternalLinksContainer>
                         <Details>
-                            End-to-end design and development of full-stack, static site generated photography blog for personal use.
+                            End-to-end design and development of full-stack photography blog for personal use.
+                            Server-side-rendered and static site generated for improved SEO and page load speeds. 
+                            Connected to Google Analytics to help track and report web traffic to improve UI/UX and better optimize site.
                             Features mobile-friendly and responsive UI displaying lazy loaded images optimized on demand and cached in CDN. 
                             Full screen images dynamically sized to fit the dimensions of the viewport without scrolling.
                             Backed by serverless API (see below).
                             Tagging functionality for filtering photos.  
                             Email subscription sign-up feature connected via MailChimp API.
-                            Contact form connected through Nodemailer. 
-                            Deployed on Vercel.
+                            Email contact form connected through Nodemailer. 
+                            Deployed on Vercel utilizing serverless functions. 
                         </Details>
                         <StackContainer>
                             <TechTag>Next.js</TechTag>
@@ -52,8 +94,8 @@ const Portfolio = ({isMobile, scrollTo}) => {
                             <TechTag>MailChimp API</TechTag>
                             <TechTag>Nodemailer</TechTag>
                             <TechTag>Vercel</TechTag>
+                            <TechTag>Google Analytics</TechTag>
                         </StackContainer>
-                        {/* <TextHeader>Technologies Used:</TextHeader> */}
                     </TextContainer>
                 </ContentContainer>
             </ProjectContainer>
@@ -64,7 +106,7 @@ const Portfolio = ({isMobile, scrollTo}) => {
                 <ContentContainer>
                     <ImageContainer>
                         {/* <Link href='https://wwangphoto.com' target='_blank'> */}
-                            <Image src='/images/planter.jpg' alt='wwangphoto.com' width='2000' height='1175' />
+                            <Image src='/images/planter.jpg' alt='planter' width='2000' height='1175' />
                         {/* </Link> */}
                     </ImageContainer>
                     <TextContainer>
@@ -82,10 +124,11 @@ const Portfolio = ({isMobile, scrollTo}) => {
                             </IconContainer> */}
                         </ExternalLinksContainer>
                         <Details>
-                            Responsive full-stack Pomodoro timer app with user authentication handled via JWT authentication tokens. 
-                            Authenticated user data served via Django Rest Framework from SQLite database; supports CRUD operations.
-                            RPC calls fired to Django to handle updating and saving user's timer data.
-                            Uses Fusion.js for serverside rendering and handling token authentication middleware and RPC calls. 
+                            Responsive full-stack Pomodoro timer app with user authentication.
+                            User authentication handled via JWT authentication tokens. 
+                            Authenticated user's profile data served via Django Rest Framework from SQLite database; supports CRUD operations.
+                            RPC calls fired to Django handle updating and saving user's timer data.
+                            Uses Fusion.js for universal rendering and handling token authentication middleware and RPC calls. 
                             App state is managed using Redux. 
                         </Details>
                         <StackContainer>
@@ -106,7 +149,7 @@ const Portfolio = ({isMobile, scrollTo}) => {
                 <ContentContainer>
                     <ImageContainer>
                         {/* <Link href='https://wwangphoto.com' target='_blank'> */}
-                            <Image src='/images/custom-api.jpg' alt='wwangphoto.com' width='1687' height='1047' />
+                            <Image src='/images/custom-api.jpg' alt='wwangphoto-API' width='1687' height='1047' />
                         {/* </Link> */}
                     </ImageContainer>
                     <TextContainer>
@@ -120,9 +163,9 @@ const Portfolio = ({isMobile, scrollTo}) => {
                         </ExternalLinksContainer>
                         <Details>
                             Serverless REST API serves JSON data for photography blog front end (see above). 
-                            Supports tag filtering through relational database modeling; connects photos, galleries, and tags
+                            Supports tag filtering through relational database modeling that connects photos, galleries, and tags
                             Deployed using serverless functions via AWS Lambda through API Gateway. 
-                            Database and images stored on S3.
+                            Database and images stored on S3 and accessed through AWS Lambda.
                         </Details>
                         <StackContainer>
                             <TechTag>Django</TechTag>
