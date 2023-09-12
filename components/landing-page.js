@@ -13,7 +13,8 @@ const LandingPage = ({scrollTo, isMobile}) => {
             <Name>William Wang.</Name>
             <SubText>I build experiences for the web.</SubText>
                 <ResumeContainer>
-                    <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
+                    
+                    <ResumeLink href='/resume/william_wang_resume_2023.pdf' target='_blank'>Resume</ResumeLink>
                 </ResumeContainer>
                 <SeeMore onClick={handleScrollTo}>See More</SeeMore>
         </Container>

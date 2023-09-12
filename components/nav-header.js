@@ -29,7 +29,7 @@ const NavHeader = ({ scrollTo, isMobile }) => {
                         <Link onClick={() => {setSection('portfolio'); scrollTo('portfolio')}}>Work</Link>
                         <Link onClick={() => {setSection('contact'); scrollTo('contact')}}>Contact</Link>
                         <ResumeContainer>
-                            <ResumeLink href='/resume/william_wang_resume_2021.pdf' target='_blank'>Resume</ResumeLink>
+                            <ResumeLink href='/resume/william_wang_resume_2023.pdf' target='_blank'>Resume</ResumeLink>
                         </ResumeContainer>
                     </LinkContainer>
                 </>
