@@ -6,9 +6,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Portfolio = ({isMobile, scrollTo}) => {
-    // useEffect(() => {
-    // }, [isMobile])
-
 
     return (
         <Container isMobile={isMobile}>

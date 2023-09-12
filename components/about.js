@@ -16,17 +16,19 @@ const About = ({isMobile, scrollTo}) => {
                 </ImageContainer>
                 <TextContainer>
                     <Intro>
-                        “Hello! I'm William, a <IntroSpan>full stack web developer</IntroSpan> based in Austin, TX”
+                        “Hello! I'm William, a <IntroSpan>software engineer</IntroSpan> based in Austin, TX”
                     </Intro>
                     <Body>
-                        I enjoy creating seamless user driven experiences that are intuitive and a joy to use and have experience designing and building end-to-end, mobile first, and responsive full-stack web applications.
+                        I am a driven and passionate full stack software engineer with 3+ years of experience in crafting scalable, user-friendly web applications. My technical proficiency spans across both front-end and back-end technologies, with a commitment to creating seamless and responsive user driven experiences.
                         <br />
                         <br />
-                        In my current role at Iternal Technologies, I was charged with developing innovative solutions across all levels of the tech stack. I played an instrumental role in securing a contract with a Fortune 50 company by successfully developing and delivering on time a user accountability layer that exceeded our client's needs. This full-stack event audit log monitored, recorded, and filtered user and system driven events in our SaaS application. I also played a primary role in the design and development of our user facing search engine application by building out the front end and frontend UI component library with a strong focus on UX/UI design. 
+                        In my last role with Iternal Technologies, a small tech startup, I collaborated cross-functionally with various aspects of the business including ux/ui, business, and executive leadership to ensure that the projects delivered aligned with business and user needs. I was responsible for taking ownership and initiative in seeing projects through from start to finish. During my tenure, I developed a data ingest application to streamline content production, delivery and storage, built an accountability layer to monitor and log user and system driven events for the SaaS platform, and more.
                         <br />
                         <br />
-                        I have a passion for all things tech, and am eager to seek out opportunities to expand my skill set and utilize my creativity to develop innovative solutions. I welcome the opportunity to further discuss my experiences to see if there is an opportunity to build something amazing together!
-
+                        I take pride in writing clean, maintainable code and continuously invest in learning emerging technologies to ensure that the solutions I provide are efficient and in line with industry standards. Working with dynamic teams is an environment I thrive in as a strong communicator, analytical thinker and problem solver. I also pride myself in being able to wear multiple hats (a skill developed through years of experience working in startups and running my own business) to develop thought out solutions that align with various company and user objectives.
+                        <br />
+                        <br />
+                        I’m eager to bring my technical expertise to a dynamic team where I can contribute to meaningful projects and continue my journey of professional growth. Let’s connect and see how we can build the future together!
                         <br />
                         <br />
                         <Connect>Connect with me:</Connect>
@@ -47,16 +49,16 @@ const About = ({isMobile, scrollTo}) => {
                         </Link>
                     </Body>
                     <TagContainer>
-                        <Tag>Web Developer</Tag>
+                        <Tag>Software Engineer</Tag>
                         <Tag>Photographer</Tag>
+                        <Tag>DJ</Tag>
                         <Tag>Foodie</Tag>
                         <Tag>Adventurer</Tag>
-                        <Tag>Rugby Player</Tag>
                     </TagContainer>
                 </TextContainer>
             </ContentContainer>
             <StackContainer>
-                <TechTitle>Technologies</TechTitle>
+                <TechTitle>Key Strengths</TechTitle>
                 <ListContainer>
                     <List>
                         <Item>Next.js</Item>
@@ -69,8 +71,8 @@ const About = ({isMobile, scrollTo}) => {
                         <Item>Node.js</Item>
                         <Item>Django</Item>
                         <Item>Python</Item>
-                        <Item>SQL</Item>
-                        <Item>Fusion.js</Item>
+                        <Item>SQL/NoSQL </Item>
+                        <Item>AWS</Item>
                     </List>
                 </ListContainer>
             </StackContainer>
